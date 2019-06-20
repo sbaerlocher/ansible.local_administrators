@@ -1,35 +1,19 @@
 ---
-
 galaxy_info:
   role_name: local_administrators
-  author:
-  description:
-  company:
+  author: Simon Baerlocher <sbaerlocher@sbaerlocher.ch
+  description: Ansible role that manage Local Administraotren group.
   license: MIT
-  min_ansible_version: 2
+  min_ansible_version: 2.7
   platforms:
-    - name: Archlinux
+    - name: Windows
       versions:
         - all
-    - name: EL
-      versions:
-        - 5
-        - 6
-    - name: Fedora
-      versions:
-        - 16
-        - 17
-        - 18
-    - name: Ubuntu
-      versions:
-        - precise
-        - quantal
-        - raring
-        - saucy
-    - name: Debian
-      versions:
-        - wheezy
 
-  galaxy_tags: []
+  galaxy_tags:
+    - winodws
+    - group
+    - administraotren
+    - user
 
 dependencies: []
