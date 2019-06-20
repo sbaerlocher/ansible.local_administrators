@@ -21,11 +21,16 @@ ansible-galaxy install sbaerlocher.local_administrators
 A list of users or groups that Local Administrators
 should have rights to on the device.
 
+\*\* example
+
 ```yml
 local_administrators_defaults:
   - UserX
   - GroupX
+```
 
+```yml
+local_administrators_defaults: []
 local_administrators_groups: []
 local_administrators_hosts: []
 ```
@@ -71,3 +76,7 @@ This project is under the MIT License. See the [LICENSE](https://sbaerlo.ch/lice
 ## Copyright
 
 (c) 2019, Simon Bärlocher
+
+```
+
+```
