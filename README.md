@@ -4,6 +4,8 @@
 
 ## Description
 
+Ansible role that adds and removes users and groups to the Local Administraotren group.
+
 ## Installation
 
 ```bash
@@ -14,10 +16,37 @@ ansible-galaxy install sbaerlocher.local_administrators
 
 ## Role Variables
 
-| Variable             | Default     | Comments (type)                                   |
-| :---                 | :---        | :---                                              |
-| | | |
-| | | |
+### local administrators list
+
+A list of users or groups that Local Administrators
+should have rights to on the device.
+
+```yml
+local_administrators_defaults:
+  - UserX
+  - GroupX
+
+local_administrators_groups: []
+local_administrators_hosts: []
+```
+
+### Pure Option
+
+If the state is enable, only the specified elements exist,
+and all other unspecified existing elements are removed.
+
+```yml
+local_administrators_pure_enable: false
+```
+
+### local administrators group
+
+Name of the local administrators group like e.g.
+English Administrators or German Administratoren
+
+```yml
+local_administrators_group: Administrators
+```
 
 ## Dependencies
 
@@ -26,14 +55,14 @@ ansible-galaxy install sbaerlocher.local_administrators
 ```yml
 - hosts: all
   roles:
-     - sbaerlocher.local_administrators
+    - sbaerlocher.local_administrators
 ```
 
 ## Changelog
 
 ## Author
 
-* [Simon Bärlocher](https://sbaerlocher.ch)
+- [Simon Bärlocher](https://sbaerlocher.ch)
 
 ## License
 

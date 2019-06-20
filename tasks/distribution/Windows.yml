@@ -1,2 +1,11 @@
 ---
 # tasks file for sbaerlocher.local_administrators
+
+- name: 'windows : Add to local Administrators'
+  win_group_membership:
+    name: 'Administrators'
+    members:
+      - '{{ local_administrators_defaults }}'
+      - '{{ local_administrators_groups }}'
+      - '{{ local_administrators_hosts }}'
+    state: "{{ 'pure' if local_administrators_pure_enable else 'present'}}"
